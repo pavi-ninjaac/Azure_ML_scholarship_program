@@ -88,3 +88,43 @@ After we have normalized the text, we can take the next step of actually encodin
 - 1) Term Frequency-Inverse Document Frequency (TF-IDF) vectorization
 - 2) Word embedding, as done with Word2vec or Global Vectors (GloVe)
 
+
+## Model vs Algorithm
+>> Models are the specific representations learned from data
+
+>> Algorithms are the processes of learning
+
+Model=Algorithm(Data)<br/>
+##### Algorithms:
+We can think of an algorithm as a mathematical tool that can usually be represented by an equation as well as implemented in code. For example, y = Wx + b is an algorithm that can be used to calculate y from x if the values for W and b are known. But how do we get W and b?
+We can plug the data into the algorithm and calculate W = 1 and b = 0. We would say that that the algorithm was run on the data and learned the values ofr W and b. The output of the learning process is W = 1 and b = 0.
+## models:
+Machine learning models are outputs or specific representations of algorithms that run on data. A model represents what is learned by a machine learning algorithm on the data.
+
+In the previous example, y = 1*x + 0 is the model we obtained from running the algorithm y = Wx + b on the training data. We can also say that y = 1*x + 0 is the model that can be used to predict y from x.
+
+A machine learning model can also be written in a set of weights or coefficients instead of a full equation. Looking at the previous example, since we know the algorithm, it is redundant to keep the full equation y = 1*x + 0. All we need are the weights (or coefficients) W = 1 and b = 0. Thus, we can also think of a model as a set of weights (or coefficients) that have been learned.
+
+## Learning function
+As mentioned earlier, we can generally think of a machine learning algorithm as a process for learning, and models as specific representations that we train using data. In essence, machine learning algorithms aim to learn a target function (ff) that describes the mapping between data input variables (XX) and an output variable (YY).
+>> Y=f(X)
+Since the process extrapolates from a limited set of values, there will always be an error ee which is independent of the input data (XX) such that:
+>> Y=f(X)+e
+
+
+Note that the irreducible error we're discussing here is different from the model error we talked about earlier in the lesson. Irreducible error is caused by the data collection process—such as when we don't have enough data or don't have enough data features. In contrast, the model error measures how much the prediction made by the model is different from the true output. The model error is generated from the model and can be reduced during the model learning process.<br/>
+
+### Parametric MOdel
+Parametric machine learning algorithms make assumptions about the mapping function and have a fixed number of parameters. No matter how much data is used to learn the model, this will not change how many parameters the algorithm has. With a parametric algorithm, we are selecting the form of the function and then learning its coefficients using the training data.<br/>
+
+An example of this would be the approach used in linear regression algorithms, where the simplified functional form can be something like:<br/>
+>> B0+B1*X1+B2*X2=0
+### Non-parametric algorithms
+Non-parametric algorithms do not make assumptions regarding the form of the mapping function between input data and output. Consequently, they are free to learn any functional form from the training data.<br/>
+
+A simple example is the K-nearest neighbors (KNN) algorithm, which we'll discuss in more detail later in the course. KNN does not make any assumptions about the functional form, but instead uses the pattern that points have similar output when they are close.
+
+
+
+
+
