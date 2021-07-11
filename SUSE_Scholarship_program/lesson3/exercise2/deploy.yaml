@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginx-apline
+  name: nginx-apline
+  namespace: dem
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-apline
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginx-apline
+    spec:
+      containers:
+      - image: nginx-apline
+        name: nginx-apline
+        resources: {}
+status: {}
